@@ -72,7 +72,6 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.chomp
     artists_songs = stored_list.select {|song| song.artist.name == input}
-    binding.pry
     sorted = artists_songs.sort_by {|song| song.name}
     sorted.each do |song| 
       puts "#{i}. #{song.name} - #{song.genre.name}"
