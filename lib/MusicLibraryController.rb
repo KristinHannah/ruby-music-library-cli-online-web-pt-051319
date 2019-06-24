@@ -48,7 +48,7 @@ class MusicLibraryController
   def list_artists 
     i = 1 
     artists = stored_list.collect {|song| song.artist.name} 
-    artists << Artist.all[-1].name
+    artists << Artist.all[0].name
     binding.pry
     sorted_artists = artists.sort {|a,b| a <=> b} 
     sorted_artists.uniq.each do |name| 
